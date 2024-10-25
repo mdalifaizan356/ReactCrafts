@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import React from 'react'
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import offBulb from "../../../public/offBulb.png"
 import onBulb from "../../../public/onBulb.png"
+
 
 
 const ToggleSwitch = () => {
@@ -15,11 +17,17 @@ const ToggleSwitch = () => {
 
 
   return (
-    <>
-      <img src = {isOff ? offBulb : onBulb}  width="10%" />
-      <button type='button' onClick={handleButton}>{BtnOff}</button>
-    </>
+    <Container>
+      <Row className="justify-content-center">
+        <Col xs={12} md={6} className="bg-danger text-white text-center p-3">
+        <img src = {isOff ? offBulb : onBulb}  width="50%" />
+        <Button variant="outline-primary" className="m-2" type='button' onClick={handleButton}>{BtnOff}</Button>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
 export default ToggleSwitch
+
+

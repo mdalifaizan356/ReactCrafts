@@ -1,24 +1,34 @@
-import { useState } from 'react'
-import React from 'react'
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import { useState } from 'react';
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 const Counter = () => {
-  const [number, setnumber]=useState(0);
+  const [number, setNumber] = useState(0);
 
-  function increement(){
-    setnumber(number -1)
+  function increment() {
+    setNumber(number + 1);
   }
 
-  function decreement(){
-    setnumber(number - 1)
+  function decrement() {
+    setNumber(number - 1);
   }
+
+  function reset() { 
+    setNumber(0);
+  }
+
   return (
-    <>
-      <button type='button' onClick={increement}>Increement</button>
-      <h1>{number}</h1>
-      <button type='button' onClick={decreement}>Decreement</button>
-    </>
-  )
-}
+    <Container>
+      <Row className="justify-content-center">
+        <Col xs={12} md={6} className="bg-danger text-white text-center p-3">
+          <h1>{number}</h1>
+          <Button variant="outline-primary" className="m-2" onClick={increment}>Increment</Button>
+          <Button variant="outline-primary" className="m-2" onClick={decrement}>Decrement</Button>
+          <Button variant="outline-primary" className="m-2" onClick={reset}>Reset</Button>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
-export default Counter
+export default Counter;

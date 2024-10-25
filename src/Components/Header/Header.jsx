@@ -1,20 +1,17 @@
-import React from 'react'
-// import { Link } from 'react-router-dom'
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import '../Header/Header.css'
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Header = () => {
-  return (
-    <>
-      <div className='container-fluid bg-warning'>
-        <div className='row'>
-            <div className='col-12'>
-                <marquee><h4>Work in Progress</h4></marquee>
-            </div>
-        </div>
-      </div>
-    </>
-  )
+function Header() {
+    return (
+        <Container fluid>
+            <Row>
+                <Col className="bg-secondary text-white p-3">
+                <h1 className="text-center">Work Under Construction By Faizan</h1>
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
-export default Header
+export default Header;

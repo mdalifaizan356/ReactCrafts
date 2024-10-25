@@ -1,27 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './Navbar.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col, Nav } from 'react-bootstrap';
+import ColorChanger from './../../Pages/ColorChanger/ColorChanger';
 
-const Navbar = () => {
+const VerticalNavbar = () => {
   return (
-    <>
-        <div className='row border-success'>
-          <div className='col'>
-            <nav className="nav"> 
-            <h6>Single Page Applications</h6>
-                <ul>
-                    <li><Link to = {'/counter'} className='navlink'>Counter</Link></li>
-                    <li><Link to = {'/itemlist'} className='navlink'>Item List</Link></li>
-                    <li><Link to = {'/showinput'} className='navlink'>Show Input</Link></li>
-                    <li><Link to = {'/toggleswitch'} className='navlink'>Toggle Switch</Link></li>
-                    <li><Link to = {'/expencetraker'} className='navlink'>Expence Traker</Link></li>
-                </ul>
-            </nav>
-          </div>
-        </div>
-    </>
-  )
-}
+    <Container>
+      <Row>
+        <Col>
+          <Nav className="flex-column">
+            <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
+            {/* <Nav.Link as={Link} to="/itemlist">Item List</Nav.Link> */}
+            <Nav.Link as={Link} to="/showinput">Show Input</Nav.Link>
+            <Nav.Link as={Link} to="/toggleswitch">Toggle Switch</Nav.Link>
+            <Nav.Link as={Link} to="/colorchanger">Color Changer</Nav.Link>
+          </Nav>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
-export default Navbar
+export default VerticalNavbar;
