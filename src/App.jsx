@@ -19,8 +19,8 @@ function App() {
           <Col md={2} className="bg-light">
             <Navbar />
           </Col>
-          <Col md={10} className="p-4">
-            <Container fluid className="bg-danger" style={{ height: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Col md={7} className="p-2">
+            <Container fluid className="bg-warning" style={{ height: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Routes>
                 <Route path="/" element={<Counter />} />
                 <Route path="/counter" element={<Counter />} />
@@ -30,6 +30,10 @@ function App() {
                 <Route path="/colorchanger" element={<ColorChanger />} />
               </Routes>
             </Container>
+          </Col>
+          <Col md={1}>
+            <h1>Description</h1>
+            
           </Col>
         </Row>
       </Container>

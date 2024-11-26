@@ -19,6 +19,6 @@ const VerticalNavbar = () => {
       </Row>
     </Container>
   );
-};
+}; 
 
 export default VerticalNavbar;

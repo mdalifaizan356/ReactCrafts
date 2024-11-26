@@ -107,3 +107,21 @@ const ExpenceTraker = () => {
 export default ExpenceTraker
 
 
+
+
+
+
+
+
+
+
+1.  db.users.insertOne({name:"userName", email:"userEmail", age:userAge});
+2.  db.users.find();
+3.  db.user.find({email:"userEmail"});
+4.  db.user.updateOne({name:"newName"}, {name:"oldName"});
+4.  db.user.updateAll({email:"newEmail"}, {isActive:true});
+6.  db.users.find().count();
+7.  db.users.delete({isActive:false});
+8.  db.users.find({hobbies:"hiking"}); 
+9.  db.users.find({age:{$gt:25}}, {hobbies:["gaming", "reading"]});
+10. db.users.delete({age:{$lte:30}},{hobby:{$ne:hiking}});

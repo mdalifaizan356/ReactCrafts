@@ -7,7 +7,7 @@ function Header() {
         <Container fluid>
             <Row>
                 <Col className="bg-secondary text-white p-3">
-                <h1 className="text-center">Work Under Construction By Faizan</h1>
+                <h1 className="text-center">All Small Projects On React</h1>
                 </Col>
             </Row>
         </Container>
