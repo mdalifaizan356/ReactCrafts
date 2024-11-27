@@ -45,7 +45,7 @@ function decreementFlow(){
   return (
     <Container>
       <Row className="justify-content-center">
-        <Col xs={12} md={6} className="bg-dark text-white text-center p-3">
+        <Col xs={12} md={8} className="bg-dark text-white text-center p-3">
           <h1>{count}</h1>
           <Button variant="outline-primary" className="m-2" onClick={increment}>Increment</Button>
           <Button variant="outline-primary" className="m-2" onClick={decrement}>Decrement</Button>
