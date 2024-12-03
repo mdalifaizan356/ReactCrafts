@@ -1,27 +1,28 @@
 // import React from 'react';
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar bg="dark" variant="dark" expand={false} sticky="top">
-      <Container>
-        <Navbar.Brand href="#home">ReactCreaft</Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
-        <Navbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-          show={show}
-          onHide={handleClose}
-        >
-          <Offcanvas.Header closeButton>
+    <>
+      <Navbar bg="dark" variant="dark" expand={false} sticky="top">
+        <Container>
+          <Navbar.Brand as={Link} to="/">REACT<span style={{color:"red"}}>CRAFT</span></Navbar.Brand>
+            <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
+            <Navbar.Offcanvas
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+              placement="end"
+              show={show}
+              onHide={handleClose}
+            >
+            <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
@@ -34,7 +35,8 @@ const Header = () => {
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
-    </Navbar>
+      </Navbar>
+    </>
   );
 };
 
