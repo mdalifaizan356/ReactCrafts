@@ -3,6 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background: linear-gradient(0deg, rgba(2,5,28,1) 0%, rgba(26,195,190,1) 100%);
+
+html, body {
+    height: 100%;
+    background: radial-gradient(circle, rgba(180,98,16,1) 0%, rgba(70,252,204,0.7987570028011204) 100%);
+    
+}
+
+#root {
+    height: 100%;
 }

@@ -1,4 +1,3 @@
-// import React from 'react';
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,6 +29,7 @@ const Header = () => {
             <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
             <Nav.Link as={Link} to="/showinput">Show Input</Nav.Link>
             <Nav.Link as={Link} to="/toggleswitch">Toggle Switch</Nav.Link>
+            <Nav.Link as={Link} to="/fetchdata">Fetch Data</Nav.Link>
             <Nav.Link as={Link} to="/colorchanger">Color Changer</Nav.Link>
             </Nav>
           </Offcanvas.Body>

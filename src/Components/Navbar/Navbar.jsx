@@ -30,6 +30,7 @@ const VerticalNavbar = () => {
             <Nav.Link as={Link} to="/showinput">Show Input</Nav.Link>
             <Nav.Link as={Link} to="/toggleswitch">Toggle Switch</Nav.Link>
             <Nav.Link as={Link} to="/colorchanger">Color Changer</Nav.Link>
+            <Nav.Link as={Link} to="/fetchdata">Data Fetch</Nav.Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
