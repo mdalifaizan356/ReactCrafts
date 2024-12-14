@@ -2,10 +2,13 @@ import { useState } from 'react'
 import React from 'react'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProjectInfo from './../../Components/ProjectInfo/ProjectInfo';
+
 
 const ShowInput = () => {
     const [currentInput, setInput] = useState("");
     const [show, setShow] = useState(false);
+    const projectDescription ="This is a simple counter project where you can increment, decrement, and reset the count.";
 
     const viewHandler = () => {
         setShow(true);
@@ -18,37 +21,15 @@ const ShowInput = () => {
     return (
         <Container fluid>
         <Row>
-        <Col>
-        {(
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Description</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <p>Advance Counter</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      )}
-        </Col>
-      </Row>
-      <Row>
-        <Col className="p-2" style={{ textAlign: "center" }}>
-          <h1 style={{ color: "white" }}>Show Input</h1>
-        </Col>
-      </Row>
-
-      <Row className="mt-2">
-        <Col md={12} className="p-3">
-          <Button style={{width:"100%"}} onClick={viewHandler}>Click For Description</Button>
-        </Col>
-      </Row>
-      <Row>
-            <Col md={10} className="p-3 border mt-0" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Col>
+        <ProjectInfo
+        projectName="Show Input"
+        projectDescription={projectDescription}
+      />
+      </Col>
+    </Row>
+    <Row className="mt-5">
+            <Col className="p-3  mt-0" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
                     <div
                         style={{

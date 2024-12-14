@@ -1,127 +1,133 @@
-import { useState } from 'react';
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
-import Table from 'react-bootstrap/Table';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React, { useState } from "react";
 
+const ToDoList = () => {
+  // State for managing tasks
+  const [task, setTask] = useState("");
+  const [todos, setTodos] = useState([]);
 
+  // Add a new task
+  const addTodo = (e) => {
+    e.preventDefault();
+    if (task.trim()) {
+      setTodos([...todos, task]);
+      setTask("");
+    }
+  };
 
-const ExpenceTraker = () => {
-    const [expences, setExpense] = useState([])
-    const [exName, setExName]=useState("");
-    const [exAmount, setExAmount]=useState("");
-    
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  // Remove a task
+  const removeTodo = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
 
-
-
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        if(exName && exAmount){
-            setExpense([...expences, {exName, exAmount}]);
-            setExName("");
-            setExAmount("");
-        }
-    };
-    console.log(expences)
   return (
-    <>
-    <Container>
-        <Row>
-            <Col><Button variant="primary" onClick={handleShow} className='mt-5 mb-2'>Add Expense</Button></Col>
-            <Col>
-                <h1>Card</h1>
-                {
-                    expences &&
-                    expences.map((data, index)=>(
-                    <Card className='mb-2' style={{ width: '18rem' }}>
-                    <Card.Body>
-                    <Card.Title>Product : {data.exName}</Card.Title>
-                    <Card.Title>Amount : {data.exName}</Card.Title>
-                    </Card.Body>
-                    </Card>
-                    ))
-                }
-            </Col>
-            <Col>
-            <h1>Table</h1>
-            <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Sl/No</th>
-          <th>Expence Name</th>
-          <th>Expence Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-      {
-        expences &&
-        expences.map((data, index)=>(
-            <>
-        <tr>
-          <td>{index + 1}</td>
-          <td>{data.exName}</td>
-          <td>{data.exAmount}</td>
-        </tr>
-        </>
-      ))}
-      </tbody>
-    </Table>
-            </Col>
-        </Row>
-    </Container>
-    
+    <div style={{ padding: "20px", maxWidth: "400px", margin: "auto", textAlign: "center" }}>
+      <h1 style={{ marginBottom: "20px" }}>To-Do App</h1>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <Form className='mb-5'>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Expence Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter Expence Name" value={exName} onChange={(e)=>setExName(e.target.value)} />
-      </Form.Group>
+      {/* Input Form */}
+      <form onSubmit={addTodo} style={{ marginBottom: "20px" }}>
+        <input
+          type="text"
+          placeholder="Enter a task"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          style={{ padding: "10px", width: "250px", marginRight: "10px" }}
+        />
+        <button type="submit" style={{ padding: "10px 20px" }}>
+          Add
+        </button>
+      </form>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Expence Amount</Form.Label>
-        <Form.Control type="number" placeholder="Enter Amount" value={exAmount} onChange={(e)=>setExAmount(e.target.value)}/>
-      </Form.Group>
-    </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>Close</Button>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>Add Expense</Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+      {/* To-Do List */}
+      <ul style={{ listStyleType: "none", padding: 0 }}>
+        {todos.map((todo, index) => (
+          <li
+            key={index}
+            style={{
+              marginBottom: "10px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              backgroundColor: "#f4f4f4",
+              padding: "10px",
+              borderRadius: "5px",
+            }}
+          >
+            <span>{todo}</span>
+            <button
+              onClick={() => removeTodo(index)}
+              style={{
+                padding: "5px 10px",
+                backgroundColor: "red",
+                color: "white",
+                border: "none",
+                borderRadius: "3px",
+                cursor: "pointer",
+              }}
+            >
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
-}
-export default ExpenceTraker
+};
+
+export default ToDoList;
 
 
 
 
 
 
+import { useState } from "react";
+import React from "react";
+import { Container, Row, Col, Form } from "react-bootstrap";
+import ProjectInfo from "./../../Components/ProjectInfo/ProjectInfo";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+const ToDoList = () => {
+  const [task, setTask] = useState("");
 
+  const projectDescription = "TO DO APP"
 
+  return (
+    <Container fluid>
+      <Row>
+        <Col>
+          <ProjectInfo
+            projectName="Task Tracker"
+            projectDescription={projectDescription}
+          />
+        </Col>
+      </Row>
 
-1.  db.users.insertOne({name:"userName", email:"userEmail", age:userAge});
-2.  db.users.find();
-3.  db.user.find({email:"userEmail"});
-4.  db.user.updateOne({name:"newName"}, {name:"oldName"});
-4.  db.user.updateAll({email:"newEmail"}, {isActive:true});
-6.  db.users.find().count();
-7.  db.users.delete({isActive:false});
-8.  db.users.find({hobbies:"hiking"}); 
-9.  db.users.find({age:{$gt:25}}, {hobbies:["gaming", "reading"]});
-10. db.users.delete({age:{$lte:30}},{hobby:{$ne:hiking}});
+      <Row className="mt-3">
+        <Col className="border border-dark d-flex justifyContent-center alignItems-center">
+          <Form className="w-100">
+            <Form.Group className="mb-3 d-flex " controlId="formTask">
+              {/* <Form.Label>Enter New Task</Form.Label> */}
+              <Form.Control
+              style={{ padding: "10px 20px", border:"none"}}
+                type="txt"
+                placeholder="Enter New Task"
+                name="Email"
+                value={task}
+                onChange={(e)=>(setTask(e.target.value))}
+                required
+              />
+              <button type="submit" style={{ padding: "10px 20px", border:"none"}}>Add</button>
+            </Form.Group>
+          </Form>
+        </Col>
+      </Row>
+      <Row className="mt-3">
+        <Col className="border border-dark">
+
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default ToDoList;

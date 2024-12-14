@@ -11,6 +11,7 @@ import ToggleSwitch from '../src/Pages/ToggleSwitch/ToggleSwitch';
 import ColorChanger from './Pages/ColorChanger/ColorChanger';
 import Home from './Pages/Home/Home';
 import FetchData from './Pages/FetchData/FetchData';
+import ToDoList from './Pages/ToDoList/ToDoList';
 
 function App() { 
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/showinput" element={<ShowInput />} />
                 <Route path="/toggleswitch" element={<ToggleSwitch />} />
                 <Route path="/colorchanger" element={<ColorChanger />} />
+                <Route path="/todolist" element={<ToDoList />} />
                 <Route path="/fetchdata" element={<FetchData />} />
               </Routes>
           </Col>
