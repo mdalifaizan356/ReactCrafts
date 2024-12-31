@@ -8,9 +8,9 @@ function ProjectInfo({ projectName, projectDescription }) {
   const handleClose = () => setShow(false);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px"}}>
+    <div style={{ textAlign: "center", marginTop: "15px"}}>
       <h2>{projectName}</h2>
-      <Button variant="primary" onClick={handleShow} style={{width:"100%"}}>Click for Description</Button>
+      <Button variant="primary" onClick={handleShow} style={{width:"50%"}}>Click for Description</Button>
 
       {/* Modal */}
       <Modal show={show} onHide={handleClose} centered>

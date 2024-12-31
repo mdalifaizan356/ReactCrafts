@@ -2,15 +2,14 @@ import { useState } from "react";
 import React from "react";
 import { Container, Row, Col, Button, Modal } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProjectInfo from './../../Components/ProjectInfo/ProjectInfo';
+import ProjectInfo from '../Components/ProjectInfo/ProjectInfo';
 
 function Counter() {
   const [count, setCount] = useState(0);
   const [continueIncreement, setIncreement] = useState(true);
   const [continueDecreement, setDecreement] = useState(true);
   const projectDescription ="This is a simple counter project where you can increment, decrement, and reset the count.";
-
-
+  
   function increment() {
     if (continueIncreement) {
       setCount(count + 1);

@@ -4,14 +4,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../src/Components/Header/Header';
-// import Navbar from '../src/Components/Navbar/Navbar';
-import Counter from '../src/Pages/Counter/Counter';
-import ShowInput from '../src/Pages/ShowInput/ShowInput';
-import ToggleSwitch from '../src/Pages/ToggleSwitch/ToggleSwitch';
-import ColorChanger from './Pages/ColorChanger/ColorChanger';
+import Counter from '../src/Pages/Counter';
+import ShowInput from '../src/Pages/ShowInput';
+import ToggleSwitch from '../src/Pages/ToggleSwitch';
+import ColorChanger from './Pages/ColorChanger';
 import Home from './Pages/Home/Home';
-import FetchData from './Pages/FetchData/FetchData';
-import ToDoList from './Pages/ToDoList/ToDoList';
+import FetchData from './Pages/FetchData';
+import ToDoList from './Pages/ToDoList';
 
 function App() { 
   return (

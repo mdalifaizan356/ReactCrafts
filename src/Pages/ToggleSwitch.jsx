@@ -2,9 +2,9 @@ import { useState } from 'react'
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import offBulb from "../../../public/offBulb.png"
-import onBulb from "../../../public/onBulb.png"
-import ProjectInfo from '../../Components/ProjectInfo/ProjectInfo';
+import offBulb from "../../public/offBulb.png"
+import onBulb from "../../public/onBulb.png"
+import ProjectInfo from '../Components/ProjectInfo/ProjectInfo';
 
 
 
@@ -17,7 +17,7 @@ const ToggleSwitch = () => {
 
   const handleButton =()=>{
     isOn(!isOff);
-    BtnOn (isOff? "Off" : "On");
+    BtnOn (isOff? "On" : "Off");
   }
 
 
@@ -31,14 +31,10 @@ const ToggleSwitch = () => {
       />
       </Col>
     </Row>
-
-    <Row className='mt-5'>
-
-    </Row>
-    <Row className="mt-2">
+    <Row className="mt-5  d-flex justify-content-center align-items-center mx-auto">
       <Col md={10} className="p-3" style={{ display:"flex", justifyContent:"center", alignItems:"center"}}>
         <img src = {isOff ? offBulb : onBulb}  width="15%" />
-        <Button variant="outline-primary" className="m-2" type='button' onClick={handleButton}>{BtnOff}</Button>
+        <Button variant="outline-primary" className="m-2 bg-danger w-25 " type='button' onClick={handleButton}>{BtnOff}</Button>
       </Col>
     </Row>
   </Container>

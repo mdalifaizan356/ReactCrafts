@@ -20,11 +20,12 @@ const Header = () => {
               placement="end"
               show={show}
               onHide={handleClose}
+              className="mt-5"
             >
             <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
+            <Offcanvas.Title id="offcanvasNavbarLabel">Project List</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body className="bg-danger">
             <Nav className="justify-content-end flex-grow-1 pe-3" onClick={handleClose}>
             <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
             <Nav.Link as={Link} to="/showinput">Show Input</Nav.Link>

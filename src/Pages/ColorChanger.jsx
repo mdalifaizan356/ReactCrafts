@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Modal, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProjectInfo from './../../Components/ProjectInfo/ProjectInfo';
+import ProjectInfo from '../Components/ProjectInfo/ProjectInfo';
 
 const ColorChanger = () => {
-  const [color, setColor] = useState('white');
+  const [color, setColor] = useState('');
   const projectDescription ="This is a simple counter project where you can increment, decrement, and reset the count.";
 
 
@@ -18,8 +18,8 @@ const ColorChanger = () => {
         />
         </Col>
       </Row>
-      <Row className='mt-5'>
-          <Col className="text-center p-4" style={{ backgroundColor: color, height: '50vh' }}>
+      <Row className='mt-5 w-50 d-flex justify-content-center align-items-center mx-auto'>
+          <Col className="text-center p-4" style={{ backgroundColor: color, height: '50vh'}}>
             <Form.Control
               type="text"
               placeholder="Enter a color name"

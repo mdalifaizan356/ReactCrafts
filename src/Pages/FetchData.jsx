@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { Container, Row, Col, Button, Modal, Card } from "react-bootstrap";
 import axios from "axios";
-import ProjectInfo from "./../../Components/ProjectInfo/ProjectInfo";
+import ProjectInfo from "../Components/ProjectInfo/ProjectInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const FetchData = () => {
