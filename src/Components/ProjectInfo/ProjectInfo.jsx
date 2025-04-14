@@ -12,8 +12,8 @@ const ProjectInfo = ({ projectId }) => {
 
   return (
     <div style={{ textAlign: "center", marginTop: "10px" }}>
-      {/* <h2>{project.title}</h2> */}
-      <Button variant="primary" onClick={handleShow} style={{ width: "20%" }}>
+      <h2>{project.title}</h2>
+      <Button variant="primary" onClick={handleShow} style={{ width: "100%" }}>
         {/* Click for Description */}
         {project.title}
       </Button>
