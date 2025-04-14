@@ -2,7 +2,7 @@ import { useState } from 'react'
 import React from 'react'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProjectInfo from '../Components/ProjectInfo/ProjectInfo';
+import ProjectInfo from '../../../../Components/ProjectInfo/ProjectInfo';
 
 
 const ShowInput = () => {

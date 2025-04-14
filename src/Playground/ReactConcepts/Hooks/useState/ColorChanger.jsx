@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Modal, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProjectInfo from '../Components/ProjectInfo/ProjectInfo';
+import ProjectInfo from '../../../../Components/ProjectInfo/ProjectInfo';
 
 const ColorChanger = () => {
   const [color, setColor] = useState('');
-  const projectDescription ="This is a simple counter project where you can increment, decrement, and reset the count.";
-
 
   return (
     <Container fluid>
       <Row>
         <Col>
-          <ProjectInfo
-          projectName="Color Changer"
-          projectDescription={projectDescription}
-        />
+        <ProjectInfo projectId="counter" />
         </Col>
       </Row>
       <Row className='mt-5 w-50 d-flex justify-content-center align-items-center mx-auto'>

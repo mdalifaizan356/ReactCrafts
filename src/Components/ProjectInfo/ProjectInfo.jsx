@@ -1,33 +1,39 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { descriptions } from "../../Data/Description";
 
-function ProjectInfo({ projectName, projectDescription }) {
+const ProjectInfo = ({ projectId }) => {
   const [show, setShow] = useState(false);
-
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
-  return (
-    <div style={{ textAlign: "center", marginTop: "15px"}}>
-      <h2>{projectName}</h2>
-      <Button variant="primary" onClick={handleShow} style={{width:"50%"}}>Click for Description</Button>
+  const project = descriptions.find(item => item.id === projectId);
+  if (!project) return <div>Project description not found.</div>;
 
-      {/* Modal */}
+  return (
+    <div style={{ textAlign: "center", marginTop: "10px" }}>
+      {/* <h2>{project.title}</h2> */}
+      <Button variant="primary" onClick={handleShow} style={{ width: "20%" }}>
+        {/* Click for Description */}
+        {project.title}
+      </Button>
+
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{projectName}</Modal.Title>
+          <Modal.Title>{project.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>{projectDescription}</p>
-        </Modal.Body> 
-        <Modal.Footer>
+        <p>{project.conceptSummry}</p>
+          <p>{project.description}</p>
+        </Modal.Body>
+        {/* <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </div>
   );
-}
+};
 
 export default ProjectInfo;

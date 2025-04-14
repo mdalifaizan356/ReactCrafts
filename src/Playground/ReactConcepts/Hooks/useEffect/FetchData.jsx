@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { Container, Row, Col, Button, Modal, Card } from "react-bootstrap";
 import axios from "axios";
-import ProjectInfo from "../Components/ProjectInfo/ProjectInfo";
+import ProjectInfo from "../../../../Components/ProjectInfo/ProjectInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const FetchData = () => {
@@ -38,10 +38,7 @@ const FetchData = () => {
       <Container fluid>
         <Row>
           <Col>
-            <ProjectInfo
-              projectName="Fetch Data from API"
-              projectDescription={projectDescription}
-            />
+            <ProjectInfo projectId="fetchData" />
           </Col>
         </Row>
 
@@ -130,10 +127,6 @@ const FetchData = () => {
 export default FetchData;
 
 
-
 //new componet bana kar data props k threw send kar k
 // jaha api call ho rhi he use me api data  set kar k usi component me individual data ko show karwa kar 
 // Model ka use kar k
-//compare fxn
-//filter
-  //lazy-loading

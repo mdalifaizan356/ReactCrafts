@@ -4,13 +4,17 @@ import { Container, Row, Col } from 'react-bootstrap';
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../src/Components/Header/Header';
-import Counter from '../src/Pages/Counter';
-import ShowInput from '../src/Pages/ShowInput';
-import ToggleSwitch from '../src/Pages/ToggleSwitch';
-import ColorChanger from './Pages/ColorChanger';
-import Home from './Pages/Home/Home';
-import FetchData from './Pages/FetchData';
-import ToDoList from './Pages/ToDoList';
+import Home from './Playground/Home/Home';
+import Counter from './Playground/ReactConcepts/Hooks/useState/Counter';
+import ShowInput from './Playground/ReactConcepts/Hooks/useState/ShowInput';
+import ToggleSwitch from './Playground/ReactConcepts/Hooks/useState/ToggleSwitch';
+import ColorChanger from './Playground/ReactConcepts/Hooks/useState/ColorChanger';
+import ToDoList from './Playground/ReactConcepts/Hooks/useState/ToDoList';
+import FetchData from './Playground/ReactConcepts/Hooks/useEffect/FetchData';
+import ProfileCard from './Playground/ReactConcepts/JSX/ProfileCard';
+import PropsImplimentation from './Playground/ReactConcepts/Props/PropsImplimentation';
+import WheartherApp from './Playground/ReactConcepts/Hooks/useEffect/WheatheraApp';
+
 
 function App() { 
   return (
@@ -27,6 +31,10 @@ function App() {
                 <Route path="/colorchanger" element={<ColorChanger />} />
                 <Route path="/todolist" element={<ToDoList />} />
                 <Route path="/fetchdata" element={<FetchData />} />
+                <Route path="/profilecard" element={<ProfileCard />} />
+                <Route path="/propsimplimentation" element={<PropsImplimentation />} />
+                <Route path="/wheartherapp" element={<WheartherApp />} />
+
               </Routes>
           </Col>
         </Row>
