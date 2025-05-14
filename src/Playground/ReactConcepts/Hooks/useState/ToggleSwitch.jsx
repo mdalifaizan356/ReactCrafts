@@ -24,9 +24,7 @@ const ToggleSwitch = () => {
     <Row>
       <Col>
         <ProjectInfo
-        projectName="Toggle Button"
-        projectDescription={projectDescription}
-      />
+        projectId="useStateToggleSwitch"/>
       </Col>
     </Row>
     <Row className="mt-5  d-flex justify-content-center align-items-center mx-auto">

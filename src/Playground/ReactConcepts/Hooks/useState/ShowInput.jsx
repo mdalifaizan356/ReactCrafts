@@ -14,10 +14,7 @@ const ShowInput = () => {
         <Container fluid>
         <Row>
       <Col>
-        <ProjectInfo
-        projectName="Show Input"
-        projectDescription={projectDescription}
-      />
+        <ProjectInfo projectId="useStateShowInput" />
       </Col>
     </Row>
     <Row className="mt-5">

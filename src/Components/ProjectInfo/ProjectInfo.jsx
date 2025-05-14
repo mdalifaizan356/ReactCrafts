@@ -12,25 +12,20 @@ const ProjectInfo = ({ projectId }) => {
 
   return (
     <div style={{ textAlign: "center", marginTop: "10px" }}>
-      <h2>{project.title}</h2>
+      <h2>{project.DemoName}</h2>
       <Button variant="primary" onClick={handleShow} style={{ width: "100%" }}>
-        {/* Click for Description */}
-        {project.title}
+        Click for Description
+        {/* {project.title} */}
       </Button>
 
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{project.title}</Modal.Title>
+          <Modal.Title>{project.UseConcept}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <p>{project.conceptSummry}</p>
-          <p>{project.description}</p>
-        </Modal.Body>
-        {/* <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer> */}
+        <p style={{ whiteSpace: 'pre-wrap'}}>{project.ConceptSummry}</p>
+          <p style={{ whiteSpace: 'pre-wrap'}}>{project.DemoSummry}</p>
+        </Modal.Body> 
       </Modal>
     </div>
   );

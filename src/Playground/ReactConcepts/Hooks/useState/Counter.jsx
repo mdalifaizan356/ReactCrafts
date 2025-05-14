@@ -41,7 +41,7 @@ function Counter() {
     <Container fluid>
     <Row>
       <Col>
-      <ProjectInfo projectId="counter" />
+      <ProjectInfo projectId="useStateCounter" />
       </Col>
     </Row>
       

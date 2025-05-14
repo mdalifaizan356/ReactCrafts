@@ -13,7 +13,9 @@ import ToDoList from './Playground/ReactConcepts/Hooks/useState/ToDoList';
 import FetchData from './Playground/ReactConcepts/Hooks/useEffect/FetchData';
 import ProfileCard from './Playground/ReactConcepts/JSX/ProfileCard';
 import PropsImplimentation from './Playground/ReactConcepts/Props/PropsImplimentation';
-import WheartherApp from './Playground/ReactConcepts/Hooks/useEffect/WheatheraApp';
+import WheatherApp from './Playground/CombinedConcepts/WheatherApp/WheatheraApp';
+import Card from './Playground/ReactConcepts/Events/MouseEvents/Card';
+import ToDoListWithUseReducer from './Playground/ReactConcepts/Hooks/useReducer/ToDoList';
 
 
 function App() { 
@@ -29,12 +31,13 @@ function App() {
                 <Route path="/showinput" element={<ShowInput />} />
                 <Route path="/toggleswitch" element={<ToggleSwitch />} />
                 <Route path="/colorchanger" element={<ColorChanger />} />
-                <Route path="/todolist" element={<ToDoList />} />
+                <Route path="/usestatetodolist" element={<ToDoList />} />
                 <Route path="/fetchdata" element={<FetchData />} />
+                <Route path="/usereducertodolist" element={<ToDoListWithUseReducer />} />
                 <Route path="/profilecard" element={<ProfileCard />} />
                 <Route path="/propsimplimentation" element={<PropsImplimentation />} />
-                <Route path="/wheartherapp" element={<WheartherApp />} />
-
+                <Route path="/wheartherapp" element={<WheatherApp />} />
+                <Route path="/card" element={<Card />} /> 
               </Routes>
           </Col>
         </Row>
@@ -42,5 +45,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

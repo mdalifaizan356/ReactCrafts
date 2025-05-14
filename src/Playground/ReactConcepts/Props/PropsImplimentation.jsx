@@ -9,15 +9,13 @@ const PropsImplimentation = ({products}) => {
     <Container fluid>
     <Row>
       <Col>
-      <ProjectInfo projectId="counter" />
+      <ProjectInfo projectId="propsimplimentation" />
       </Col>
     </Row>
       
       <Row className="mt-5">
         <Col>
           <Parent/>
-        </Col>
-        <Col>
         </Col>
       </Row>
     </Container>

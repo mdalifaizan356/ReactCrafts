@@ -72,9 +72,7 @@ const ToDoList = () => {
       <Row>
         <Col>
           <ProjectInfo
-            projectName="Task Tracker"
-            projectDescription={projectDescription}
-          />
+            projectId="useStateToDoList"/>
         </Col>
       </Row>
 

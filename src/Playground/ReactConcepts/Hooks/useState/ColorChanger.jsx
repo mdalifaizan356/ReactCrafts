@@ -10,7 +10,7 @@ const ColorChanger = () => {
     <Container fluid>
       <Row>
         <Col>
-        <ProjectInfo projectId="counter" />
+        <ProjectInfo projectId="useStateColorChanger" />
         </Col>
       </Row>
       <Row className='mt-5 w-50 d-flex justify-content-center align-items-center mx-auto'>
